@@ -1,0 +1,53 @@
+<div class="contenedor-imagen">
+  <img class="imagenes" src="./assets/backedor.jpg" alt="Logo Fondo">
+</div>
+
+<div class="all">
+  <div class="container">
+      <div class="header">
+        <h1 *ngIf="width>555" class="title">Cancelar Suscripción</h1>
+        <h3 *ngIf="width<=555" class="title">Cancelar Suscripción</h3>
+      </div>
+      <div class="inner-container">
+          <div *ngIf="width>555">
+            <p class="subtit">Introduzca su correo y haga click en "Cancelar suscripción" para dejar de recibir e-mails de nuestra parte. </p>
+          </div>
+          <div *ngIf="width<=555">
+            <p class="subtit">Introduzca su correo y haga click en "Cancelar suscripción": </p>
+          </div>
+          <div class="input-group mb-3">
+            <div type="email" class="input-group-prepend">
+              <span *ngIf="width>555" class="input-group-text" id="inputGroup-sizing-default">Correo electrónico:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="email">
+          </div>
+          <div class="bottomm">
+            <button *ngIf="value==0" (click)="sendEmail()" type="submit" class="btn btn-primary" data-bs-toggle="button">Cancelar suscripción</button>
+            <div *ngIf="value==1" class="spinner-border text-primary" role="status">
+              <span class="sr-only"></span>
+            </div>
+            <div *ngIf="value==2" class="done">
+              <div class="wrapper"> <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+              </svg>
+              </div>
+              <h4 *ngIf="width>655">
+                ¡Correo enviado correctamente! Ya puede cerrar esta página.
+              </h4>
+            </div>
+            <div *ngIf="value==3" class="erramen">
+            <div class="container2">
+              <div class="circle-border"></div>
+              <div class="circle">
+                  <div class="error"></div>
+                </div>
+          </div>
+          <div>
+            <h4 *ngIf="width>655">
+              Algo inesperado ocurrió. Por favor, inténtelo más tarde.
+            </h4>
+          </div>
+        </div>
+          </div>
+      </div>
+  </div>
+</div>

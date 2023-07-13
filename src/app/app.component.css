@@ -28,23 +28,19 @@
 .container{
     border-radius: 15px;
     padding: 25px;
-    height: 30%;
+    height: 40%;
     width: 70%;
     background-color: rgb(222, 224, 225);
     box-shadow: 2px 2px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .unsuscribe-player{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.inner-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 80%;
 }
 
 .bottomm{

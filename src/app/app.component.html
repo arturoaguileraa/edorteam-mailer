@@ -8,14 +8,13 @@
         <h1 *ngIf="width>555" class="title">Cancelar Suscripción</h1>
         <h3 *ngIf="width<=555" class="title">Cancelar Suscripción</h3>
       </div>
-      <div class="inner-container">
-          <div *ngIf="width>555">
+          <div *ngIf="width>555 && value==0">
             <p class="subtit">Introduzca su correo y haga click en "Cancelar suscripción" para dejar de recibir e-mails de nuestra parte. </p>
           </div>
-          <div *ngIf="width<=555">
+          <div *ngIf="width<=555 && value==0">
             <p class="subtit">Introduzca su correo y haga click en "Cancelar suscripción": </p>
           </div>
-          <div class="input-group mb-3">
+          <div *ngIf="value==0" class="input-group mb-3">
             <div type="email" class="input-group-prepend">
               <span *ngIf="width>555" class="input-group-text" id="inputGroup-sizing-default">Correo electrónico:</span>
             </div>
@@ -30,7 +29,7 @@
               <div class="wrapper"> <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
               </svg>
               </div>
-              <h4 *ngIf="width>655">
+              <h4>
                 ¡Correo enviado correctamente! Ya puede cerrar esta página.
               </h4>
             </div>
@@ -48,6 +47,5 @@
           </div>
         </div>
           </div>
-      </div>
   </div>
 </div>

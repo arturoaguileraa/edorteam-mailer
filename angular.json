@@ -94,8 +94,9 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/icono.jpg",
-              "src/assets"
+              "src/favicon.ico",
+              "src/assets",
+              "src/assets/icono.jpg"
             ],
             "styles": [
               "src/styles.scss"
